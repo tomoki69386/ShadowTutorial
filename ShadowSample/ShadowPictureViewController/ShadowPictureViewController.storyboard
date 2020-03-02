@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="buv-Oj-NLN">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Shadow Picture View Controller-->
+        <scene sceneID="txp-mM-Yqi">
+            <objects>
+                <viewController id="buv-Oj-NLN" customClass="ShadowPictureViewController" customModule="ShadowSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tCj-ll-bak">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WTT-KQ-bTS">
+                                <rect key="frame" x="20" y="261" width="374" height="374"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8R-Ng-uvH" customClass="ShadowPictureView" customModule="ShadowSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="249.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="i8R-Ng-uvH" secondAttribute="height" multiplier="3:2" id="Vpo-kT-dKZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObI-ap-de1">
+                                        <rect key="frame" x="0.0" y="249.5" width="374" height="124.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ObI-ap-de1" firstAttribute="height" secondItem="i8R-Ng-uvH" secondAttribute="height" multiplier="0.5" id="8qB-iQ-n6n"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WTT-KQ-bTS" firstAttribute="centerX" secondItem="tCj-ll-bak" secondAttribute="centerX" id="IdV-6E-g8a"/>
+                            <constraint firstItem="WTT-KQ-bTS" firstAttribute="centerY" secondItem="tCj-ll-bak" secondAttribute="centerY" id="Mid-gF-YSM"/>
+                            <constraint firstItem="WTT-KQ-bTS" firstAttribute="leading" secondItem="VFn-ln-xzM" secondAttribute="leading" constant="20" id="S2a-gR-b3N"/>
+                            <constraint firstItem="VFn-ln-xzM" firstAttribute="trailing" secondItem="WTT-KQ-bTS" secondAttribute="trailing" constant="20" id="kJZ-Q8-sql"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VFn-ln-xzM"/>
+                    </view>
+                    <connections>
+                        <outlet property="shadowPictureView" destination="i8R-Ng-uvH" id="B7R-m8-l6y"/>
+                        <outlet property="stackView" destination="WTT-KQ-bTS" id="waE-5n-a0u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUx-ZT-l6k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="62"/>
+        </scene>
+    </scenes>
+</document>
